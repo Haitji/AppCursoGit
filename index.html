@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba</title>
+    <style>
+        button {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 19px;
+        }
+    </style>
+    <script>
+        // Definimos una función en JavaScript para manejar el incremento del número
+        function incrementar() {
+            // Obtener el elemento con el id "numero"
+            var numeroElemento = document.getElementById("numero");
+            // Obtener el valor actual del número como entero
+            var numeroActual = parseInt(numeroElemento.textContent);
+            // Incrementar el número en 1
+            var nuevoNumero = numeroActual + 1;
+            // Actualizar el texto del elemento con el nuevo número
+            numeroElemento.textContent = nuevoNumero;
+        }
+    </script>
 </head>
 <body>
     <h1>Hola mundo</h1>
     <h2>Hola mundo 2!!</h2>
 
     <h3>Hola 336</h3>
-
+    <button onclick="incrementar()">Incrementar Número</button>
+    <h1>El número es: <span id="numero">0</span></h1>
 </body>
 </html>
